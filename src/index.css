@@ -2,8 +2,35 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: linear-gradient( white , gray);
+
+}
+.edit {
+  margin-right: 400px;
+  max-width: 300px;
+  max-height: 200px;
+  border-radius: 20px; 
+}
+.Put{
+  border-radius: 20px;
+  
+}
+.Put:hover{
+  color: aqua;
+}
+.hog-details{
+  padding-left: 400px;
+}
+.navWrapper {
+display: flex;
+padding-left: 400px;
+
 }
 
+div form input image {
+width: 100px;
+
+}
 .App {
   margin: 0% 5% 0% 5%;
   text-align: center;

@@ -1,14 +1,27 @@
-import React from "react";
-import Nav from "./Nav";
+import React, { useState } from 'react';
+import hogs from '../porkers_data';
+import HogList from './HogList';
+import AddHogForm from './AddHogForm';
+import Nav from "./Nav"
 
-import hogs from "../porkers_data";
+
 
 function App() {
-	return (
-		<div className="App">
-			<Nav />
-		</div>
-	);
+  const [hogData, setHogData] = useState(hogs);
+
+  const addHog = (newHog) => {
+    setHogData([...hogData, newHog]);
+  };
+
+  return (
+    <div>
+      <h1>Hog Dashboard</h1>
+	  <Nav />
+      <HogList hogs={hogData} />
+      <AddHogForm Hog={addHog} />
+      <hogs />
+    </div>
+  );
 }
 
 export default App;
